@@ -15,10 +15,17 @@ vim.opt.rtp:prepend(ldp)
 
 local opt =
 {
-    -- 配置：
+    -- 配置管理：
     -- { "folke/neoconf.nvim", cmd = "Neoconf" },
     -- { "folke/neodev.nvim" },
     { "folke/which-key.nvim" , cmd = "Whkey" },
+
+    -- 文件管理器：
+    -- { "nvim-neo-tree/neo-tree.nvim" },
+    { "nvim-tree/nvim-tree.lua" },
+
+	{ "nvim-treesitter/nvim-treesitter" },
+	-- { ""/"" }
 
     -- 图标：
     { "nvim-tree/nvim-web-devicons" },
@@ -26,10 +33,6 @@ local opt =
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
-
-    -- 文件管理器：
-    -- { "nvim-neo-tree/neo-tree.nvim" },
-    { "nvim-tree/nvim-tree.lua" },
 
     -- 主题：
     { "EdenEast/nightfox.nvim" }

@@ -1,4 +1,5 @@
 require("Extension/lazy/Init")
 require("Extension/nvim-tree/Init")
 require("Extension/lualine/Init")
--- require("")
+require("Extension/nvim-treesitter/Init")
+-- require("Extension/")
