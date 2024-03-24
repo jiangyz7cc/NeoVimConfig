@@ -1,18 +1,20 @@
-¾í C µÄÎÄ¼ş¼Ğ PATH ÁĞ±í
-¾íĞòÁĞºÅÎª E8F6-3924
+å· C çš„æ–‡ä»¶å¤¹ PATH åˆ—è¡¨
+å·åºåˆ—å·ä¸º E8F6-3924
 C:.
-©À©¤lua
-©¦  ©À©¤Appearance
-©¦  ©À©¤Behavior
-©¦  ©À©¤Common
-©¦  ©À©¤Extension
-©¦  ©¦  ©À©¤lazy
-©¦  ©¦  ©À©¤lualine
-©¦  ©¦  ©À©¤neodev
-©¦  ©¦  ©À©¤nvim-tree
-©¦  ©¦  ©À©¤nvim-web-devicons
-©¦  ©¦  ©¸©¤tokyonight
-©¦  ©À©¤File
-©¦  ©À©¤Key
-©¦  ©¸©¤Preset
-©¸©¤temp
+â”œâ”€Document
+â”œâ”€lua
+â”‚  â”œâ”€Appearance
+â”‚  â”œâ”€Behavior
+â”‚  â”œâ”€Common
+â”‚  â”œâ”€Extension
+â”‚  â”‚  â”œâ”€lazy
+â”‚  â”‚  â”œâ”€lualine
+â”‚  â”‚  â”œâ”€neodev
+â”‚  â”‚  â”œâ”€nvim-tree
+â”‚  â”‚  â”œâ”€nvim-web-devicons
+â”‚  â”‚  â””â”€tokyonight
+â”‚  â”œâ”€File
+â”‚  â”œâ”€Key
+â”‚  â””â”€Preset
+â”œâ”€Picture
+â””â”€temp

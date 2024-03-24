@@ -5,11 +5,11 @@ local cmd = vim.cmd
 --[[
 	可选列表：
 	carbonfox
-	slate
 	dawnfox
 	terafox
 	nightfox
-	tokyonight
+	slate
+	-- tokyonight
 --]]
 
 cmd("colorscheme carbonfox")
