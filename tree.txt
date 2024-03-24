@@ -1,0 +1,18 @@
+卷 C 的文件夹 PATH 列表
+卷序列号为 E8F6-3924
+C:.
+├─lua
+│  ├─Appearance
+│  ├─Behavior
+│  ├─Common
+│  ├─Extension
+│  │  ├─lazy
+│  │  ├─lualine
+│  │  ├─neodev
+│  │  ├─nvim-tree
+│  │  ├─nvim-web-devicons
+│  │  └─tokyonight
+│  ├─File
+│  ├─Key
+│  └─Preset
+└─temp
