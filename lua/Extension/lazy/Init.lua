@@ -16,23 +16,49 @@ vim.opt.rtp:prepend(ldp)
 local opt =
 {
     -- 配置管理：
-    -- { "folke/neoconf.nvim", cmd = "Neoconf" },
+    -- { "folke/neoconf.nvim", cmd = "NeoConf" },
     -- { "folke/neodev.nvim" },
-    { "folke/which-key.nvim" , cmd = "Whkey" },
+    { "folke/which-key.nvim" , cmd = "WhichKey" },
 
     -- 文件管理器：
     -- { "nvim-neo-tree/neo-tree.nvim" },
-    { "nvim-tree/nvim-tree.lua" },
+    { "nvim-tree/nvim-tree.lua" } ,
 
-	{ "nvim-treesitter/nvim-treesitter" },
-	-- { ""/"" }
+	{ "nvim-treesitter/nvim-treesitter" } ,
+	
+	-- 语言服务：
+	-- LSP:
+	{ "williamboman/mason.nvim" } ,
+	{ "williamboman/mason-lspconfig.nvim" } ,
+	{ "neovim/nvim-lspconfig" } ,
+	
+	-- C# LSP:
+	-- { "razzmatazz/csharp-language-server" } ,
+
+    -- 补全：
+	{ "hrsh7th/nvim-cmp" } ,
+	{ "hrsh7th/cmp-nvim-lsp" } ,
+	{ "hrsh7th/cmp-path" } ,
+
+	-- 片段：
+	{ "L3MON4D3/LuaSnip" } ,
+	{ "saadparwaiz1/cmp_luasnip" } ,
+	{ "rafamadriz/friendly-snippets" } ,
+
+	-- { "numToStr/Comment.nvim" } ,
+	-- { "windwp/nvim-autopairs" } ,
+	-- { "akinsho/bufferline.nvim" } ,
+	-- { "lewis6991/gitsigns.nvim" }
+
+	-- { 'nvim-lua/plenary.nvim' } ,
+	-- { 'nvim-telescope/telescope.nvim' } ,
 
     -- 图标：
-    { "nvim-tree/nvim-web-devicons" },
+    { "nvim-tree/nvim-web-devicons" } ,
     {
-        'nvim-lualine/lualine.nvim',
+        'nvim-lualine/lualine.nvim' ,
         dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
+    } ,
 
     -- 主题：
     { "EdenEast/nightfox.nvim" }

@@ -5,6 +5,7 @@ local opt =
 	ensure_installed =
 	{
 		"c" ,
+		"c_sharp" ,
 		"lua" ,
 		"vim" -- ,
 		-- "vimdoc" ,
