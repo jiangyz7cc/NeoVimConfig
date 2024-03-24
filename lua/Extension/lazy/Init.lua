@@ -24,7 +24,7 @@ local opt =
     -- { "nvim-neo-tree/neo-tree.nvim" },
     { "nvim-tree/nvim-tree.lua" } ,
 
-	{ "nvim-treesitter/nvim-treesitter" } ,
+	{ "nvim-treesitter/nvim-treesitter" , cmd = "TreeSitter" } ,
 	
 	-- 语言服务：
 	-- LSP:
@@ -52,6 +52,14 @@ local opt =
 
 	-- { 'nvim-lua/plenary.nvim' } ,
 	-- { 'nvim-telescope/telescope.nvim' } ,
+
+	-- 搜索：
+	-- init.lua:
+    {
+		'nvim-telescope/telescope.nvim' ,
+		tag = '0.1.6' ,
+		dependencies = { 'nvim-lua/plenary.nvim' }
+    } ,
 
     -- 图标：
     { "nvim-tree/nvim-web-devicons" } ,
