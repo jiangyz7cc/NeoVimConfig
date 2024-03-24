@@ -34,8 +34,8 @@ function data.MapKeys(bufno)
     api.config.mappings.default_on_attach(bufno)
 
     -- 自定映射：
-    map("n" , "u" , api.tree.change_root_to_parent , copt("Change root to parent"))
-    map("n" , "i" , api.tree.change_root_to_node , copt("Change root to node"))
+    map("n" , "h" , api.tree.change_root_to_parent , copt("Change root to parent"))
+    map("n" , "l" , api.tree.change_root_to_node , copt("Change root to node"))
     map("n" , "?" , api.tree.toggle_help , copt("Toggle help"))
 
     -- (er: explorer refresh)

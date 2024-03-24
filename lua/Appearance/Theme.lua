@@ -12,4 +12,4 @@ local cmd = vim.cmd
 	-- tokyonight
 --]]
 
-cmd("colorscheme carbonfox")
+cmd("colorscheme terafox")
