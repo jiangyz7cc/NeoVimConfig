@@ -1,10 +1,9 @@
 local o = vim.opt
-local cmd = vim.cmd
 
 -- 行：
 	-- 号：
 	o.number = true
-	o.numberwidth=4
+	o.numberwidth = 4
 
 	-- 相对号：
 	o.relativenumber = true
@@ -27,6 +26,9 @@ local cmd = vim.cmd
 -- 终端：
 	-- 界面颜色：
 	o.termguicolors = true
+
+-- 设置程序窗口的标题：显示当前程序路径
+	o.title = true
 
 require("Appearance/StatusLine")
 require("Appearance/Theme")

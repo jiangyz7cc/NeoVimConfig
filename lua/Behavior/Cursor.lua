@@ -1,3 +1,7 @@
+local o = vim.opt
+
+-- 光标：
+
 -- 增加对鼠标的支持
 o.mouse = 'a'
 
