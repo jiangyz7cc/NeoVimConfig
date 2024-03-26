@@ -1,6 +1,6 @@
 local data = {}
 
-local data.function Download(dp)
+function data.Download(dp)
     vim.fn.system(
     {
         "git",
@@ -8,7 +8,7 @@ local data.function Download(dp)
         "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git",
         "--branch=stable",
-        dp,
+        dp
     }
     )
 end

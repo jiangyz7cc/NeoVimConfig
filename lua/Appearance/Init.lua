@@ -1,4 +1,4 @@
-require("Appearance/RolCol")
+require("Appearance/RowCol")
 require("Appearance/StatusLine")
 
 require("Appearance/Other")

@@ -14,7 +14,7 @@ local edp = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 vim.opt.rtp:prepend(edp)
 
 local e = require("lazy")
-local c = require("ExtensionConfig")
+local c = require("Extension/lazy/ExtensionConfig")
 
 e.setup(c)
 

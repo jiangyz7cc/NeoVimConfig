@@ -17,4 +17,3 @@ o.encoding = "UTF-8"
 
 -- 文件编码：
 o.fileencoding = 'UTF-8'
-
