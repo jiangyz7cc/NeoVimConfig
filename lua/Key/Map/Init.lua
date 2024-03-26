@@ -1,7 +1,6 @@
--- 映射：
+require("Key/Map/Leading")
 
-require("Key/Map/SpecialKeys")
-require("Key/Map/OnCommandMode")
-require("Key/Map/OnInsertMode")
-require("Key/Map/OnNormalMode")
-require("Key/Map/OnVisualMode")
+require("Key/Map/Mode/Normal")
+require("Key/Map/Mode/Insert")
+require("Key/Map/Mode/Visual")
+require("Key/Map/Mode/Command")

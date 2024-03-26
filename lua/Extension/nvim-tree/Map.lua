@@ -52,7 +52,6 @@ function data.MapKeys(bufno)
     -- map("n" , "<leader>ec" , api.tree.collapse_all , copt("Collapse All"))
 
     map("n" , "<C-p>" , OutputNodePath , copt("OutputNodePath"))
-
 end
 
 -- 全局定义：

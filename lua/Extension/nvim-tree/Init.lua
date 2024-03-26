@@ -2,7 +2,7 @@
 
 local e = require("nvim-tree")
 local mc = require("Extension/nvim-tree/Map")
--- local cc = require("Extensino/nvim-tree/Color")
+-- local cc = require("Extension/nvim-tree/Color")
 
 local opt =
 {
