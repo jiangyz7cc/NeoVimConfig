@@ -1,7 +1,6 @@
 local data = {}
 
-local function data.SetColorForNodes()
-{
+function data.SetColorForNodes()
     -- 使用命令：:NvimTreeHiTest 显示图标，并对图标和文本上色
     vim.cmd(
         [[
@@ -11,6 +10,6 @@ local function data.SetColorForNodes()
             :hi link NvimTreeImageFile   Title
         ]]
     )
-}
+end
 
 return data
