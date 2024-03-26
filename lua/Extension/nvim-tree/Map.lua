@@ -8,6 +8,16 @@ local api = require("nvim-tree.api")
 
 local map = vim.keymap.set
 
+local function CreateMapOption(desc)
+	return
+	{
+		desc = "nvim-tree: " .. desc,
+		noremap = true,
+		silent = true,
+		nowait = true
+	}
+end
+
 local function OutputNodePath()
     local node = api.tree.get_node_under_cursor()
     print(node.absolute_path)
@@ -18,6 +28,7 @@ end
 -- 映射函数：
 -- 范围：nvim-tree 缓冲区中
 function data.MapKeys(bufno)
+
     local function copt(desc)
         return
         {
@@ -28,6 +39,8 @@ function data.MapKeys(bufno)
             nowait = true
         }
     end
+
+	local cgopt = CreateMapOption
 
     -- 默认映射：
     -- :help nvim-tree-mappings-default
@@ -46,7 +59,7 @@ function data.MapKeys(bufno)
     map("n" , "<C-f>" , "<C-w>w")
 
     -- (ei: explorer index(of the file in the current buffer))
-    map("n" , "<leader>ei" , api.tree.find_file , copt("Index File"))
+    map("n" , "<leader>ei" , api.tree.find_file , cgopt("Index File"))
 
     -- (ec: explorer collapse)
     -- map("n" , "<leader>ec" , api.tree.collapse_all , copt("Collapse All"))
