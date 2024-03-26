@@ -14,4 +14,3 @@ local o = vim.opt
 
 -- 设置程序窗口的标题：显示当前程序路径
 	o.title = true
-
