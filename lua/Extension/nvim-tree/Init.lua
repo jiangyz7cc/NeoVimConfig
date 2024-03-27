@@ -4,8 +4,6 @@ local e = require("nvim-tree")
 local mc = require("Extension/nvim-tree/Map")
 -- local cc = require("Extension/nvim-tree/Color")
 
-print("nvl")
-
 local opt =
 {
     on_attach = mc.MapKeys ,

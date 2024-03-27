@@ -24,11 +24,15 @@ return
 	{ "hrsh7th/nvim-cmp" } ,
 	{ "hrsh7th/cmp-nvim-lsp" } ,
 	{ "hrsh7th/cmp-path" } ,
+	{ "hrsh7th/cmp-buffer" } ,
+	{ "hrsh7th/cmp-cmdline" } ,
 
 	-- 片段：
+	{ "hrsh7th/vim-vsnip" } , -- 引擎
+	{ "hrsh7th/cmp-vsnip" } , -- 补全
 	{ "L3MON4D3/LuaSnip" } ,
-	{ "saadparwaiz1/cmp_luasnip" } ,
-	{ "rafamadriz/friendly-snippets" } ,
+	-- { "saadparwaiz1/cmp_luasnip" } ,
+	-- { "rafamadriz/friendly-snippets" } ,
 
 	-- { "numToStr/Comment.nvim" } ,
 	-- { "windwp/nvim-autopairs" } ,
@@ -39,7 +43,6 @@ return
 	-- { 'nvim-telescope/telescope.nvim' } ,
 
 	-- 搜索：
-	-- init.lua:
     {
 		'nvim-telescope/telescope.nvim' ,
 		tag = '0.1.6' ,

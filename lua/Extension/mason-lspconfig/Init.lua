@@ -2,9 +2,12 @@ local opt =
 {
 	ensure_installed =
 	{
+		"lua_ls" ,
 		"clangd" ,
-		"lua_ls"
+		"csharp_ls"
 	},
 }
 
-require("mason-lspconfig").setup(opt)
+local e = require("mason-lspconfig")
+
+e.setup(opt)
