@@ -1,5 +1,8 @@
-local map = vim.keymap.set
-
 -- 命令模式：
-map("c" , "<C-k>" , "<Up>")
-map("c" , "<C-j>" , "<Down>")
+
+local model = require("Key.Map.Library.Model")
+
+local map = model.Function.CommandMap()
+
+map("<C-k>" , "<Up>" , "Move Up")
+map("<C-j>" , "<Down>" , "Move Down")

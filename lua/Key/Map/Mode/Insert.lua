@@ -1,26 +1,22 @@
-local map = vim.keymap.set
-
-local opt =
-{
-	noremap = true
-	-- slient = true
-}
-
 -- 插入模式：
 
--- Esc:
-map("i" , "jk" , "<Esc>" , opt)
-map("i" , "<C-v>" , "<Esc>\"+p" , opt)
+local model = require("Key.Map.Library.Model")
+
+local map = model.Function.InsertMap()
+local opt = model.Option.CreateDefaultOption()
+
+map("jk" , "<Esc>" , "To Normal Mode" , opt)
+
+map("<C-v>" , "<Esc>\"+p" , "Paste Content" , opt)
 
 -- 至行首：
-map("i", "<C-b>", "<ESC>^i")
+map("<C-b>", "<Esc>^i" , "To the Begin of Line")
 
 -- 至行尾：
-map("i", "<C-e>", "<End>")
-
+map("<C-e>", "<End>" , "To the End of Line")
 
 -- 往上下左右移动：（1个字符的距离）
-map("i", "<C-k>", "<Up>")
-map("i", "<C-j>", "<Down>")
-map("i", "<C-h>", "<Left>")
-map("i", "<C-l>", "<Right>")
+map("<C-k>", "<Up>" , "Move Up")
+map("<C-j>", "<Down>" , "Move Down")
+map("<C-h>", "<Left>" , "Move Left")
+map("<C-l>", "<Right>" , "Move Right")

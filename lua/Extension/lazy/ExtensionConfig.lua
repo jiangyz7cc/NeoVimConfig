@@ -1,23 +1,23 @@
 return
 {
-    -- 配置管理：
+    -- 配置：
     -- { "folke/neoconf.nvim", cmd = "NeoConf" },
     -- { "folke/neodev.nvim" },
-    { "folke/which-key.nvim" , cmd = "WhichKey" },
 
-    -- 文件管理器：
+	-- 键：
+    { "folke/which-key.nvim" , cmd = "WhichKey" }, -- 显示键映射
+
+    -- 文件管理：
     -- { "nvim-neo-tree/neo-tree.nvim" },
     { "nvim-tree/nvim-tree.lua" } ,
 
-	{ "nvim-treesitter/nvim-treesitter" , cmd = "TreeSitter" } ,
 	
-	-- 语言服务：
+	-- 语言：
+	
 	-- LSP:
 	{ "williamboman/mason.nvim" } ,
 	{ "williamboman/mason-lspconfig.nvim" } ,
 	{ "neovim/nvim-lspconfig" } ,
-	
-	-- C# LSP:
 	-- { "razzmatazz/csharp-language-server" } ,
 
     -- 补全：
@@ -41,6 +41,9 @@ return
 
 	-- { 'nvim-lua/plenary.nvim' } ,
 	-- { 'nvim-telescope/telescope.nvim' } ,
+
+	-- 语法：
+	{ "nvim-treesitter/nvim-treesitter" , cmd = "TreeSitter" } ,
 
 	-- 搜索：
     {

@@ -1,4 +1,4 @@
-require("Key/Map/Leading")
+require("Key/Map/Special/Leading")
 
 require("Key/Map/Mode/Normal")
 require("Key/Map/Mode/Insert")

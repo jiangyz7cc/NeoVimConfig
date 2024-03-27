@@ -1,30 +1,29 @@
-local map = vim.keymap.set
-
-local opt =
-{
-	noremap = true
-	-- slient = true
-}
-
 -- 正常模式：
 
-map("n" , "<leader>ls" , ":ls<CR>" , opt , { desc = "List Buffers" })
-map("n" , "<C-l>" , ":ls<CR>")
+local model = require("Key.Map.Library.Model")
+
+local map = model.Function.NormalMap()
+
+map("<C-l>" , ":ls<CR>" , "List Buffers")
 
 -- 窗口：
 	-- 移动：
-		map("n" , "<A-h>" , "<C-w>h")
-		map("n" , "<A-j>" , "<C-w>j")
-		map("n" , "<A-k>" , "<C-w>k")
-		map("n" , "<A-l>" , "<C-w>l")
+	map("<A-h>" , "<C-w>h" , "Move to the Up Window")
+	map("<A-j>" , "<C-w>j" , "Move to the Down Window")
+	map("<A-k>" , "<C-w>k" , "Move to the Left Window")
+	map("<A-l>" , "<C-w>l" , "Move to the Right Window")
 
 	-- 分割：
-		map("n" , "<leader>su" , "<C-w>s<C-w>K" , { desc = "Split Up" })
-		map("n" , "<leader>sd" , "<C-w>s" , { desc = "Split Down" })
-		map("n" , "<leader>sl" , "<C-w>v<C-w>H" , { desc = "Split Left" })
-		map("n" , "<leader>sr" , "<C-w>v" , { desc = "Split Right" })
+	map("<leader>su" , "<C-w>s<C-w>K" , "Split Up")
+	map("<leader>sd" , "<C-w>s" , "Split Down")
+	map("<leader>sl" , "<C-w>v<C-w>H" , "Split Left")
+	map("<leader>sr" , "<C-w>v" , "Split Right")
 
-map("n" , ";" , ":" , { desc = "Activate command mode" })
+-- 激活命令行：
+map(";" , ":" , "Activate Command Mode")
 
-map("n" , "<C-s>" , "<cmd>update<CR>" , { desc = "File Save" })
-map("n" , "<C-c>" , "<cmd>%y+<CR>" , { desc = "File Copy whole" })
+-- 更新文件：（未修改则不写入）
+map("<C-s>" , "<cmd>update<CR>" , "Save File")
+
+-- 复制整个文件的内容：
+map("<C-c>" , "<cmd>%y+<CR>" , "Copy Content")
