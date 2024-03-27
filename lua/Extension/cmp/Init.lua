@@ -24,7 +24,7 @@ local opt =
 	snippet =
 	{
 		expand = function(args)
-			require('luasnip').lsp_expand(args.body)
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 	mapping = cmp.mapping.preset.insert(
@@ -77,6 +77,7 @@ local opt =
 		{
 			{ name = 'nvim_lsp' },
 			{ name = 'luasnip' },
+			{ name = 'csharp_ls' },
 			{ name = 'path' },
 		} ,
 		{

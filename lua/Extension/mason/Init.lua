@@ -1,4 +1,4 @@
-local opt = 
+local opt =
 {
 	ui =
 	{
@@ -11,4 +11,6 @@ local opt =
 	}
 }
 
-require("mason").setup(opt)
+local e = require("mason")
+
+e.setup(opt)

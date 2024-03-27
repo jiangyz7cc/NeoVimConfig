@@ -2,20 +2,27 @@
 
 local e = require("nvim-tree")
 local mc = require("Extension/nvim-tree/Map")
--- local cc = require("Extensino/nvim-tree/Color")
+-- local cc = require("Extension/nvim-tree/Color")
 
 local opt =
 {
+    on_attach = mc.MapKeys ,
     filters =
     {
         dotfiles = true,
     },
     sort =
     {
-        sorter = "name", -- "case_sensitive",
+        sorter = "name",
         folders_first = true,
         files_first = false,
     },
+	root_dirs = { "$Home" },
+	sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+	reload_on_bufenter = false,
+    select_prompts = true,
+    disable_netrw = false,
     view =
     {
         centralize_selection = false,
@@ -26,13 +33,26 @@ local opt =
         number = false,
         relativenumber = false,
         signcolumn = "yes",
-        width = 30
+        width = 30,
+        float =
+		{
+			enable = false,
+			quit_on_focus_loss = true,
+			open_win_config =
+			{
+			    relative = "editor",
+			    border = "rounded",
+			    width = 30,
+			    height = 30,
+			    row = 1,
+			    col = 1,
+			},
+		},
     },
     renderer =
     {
         group_empty = true,
-    },
-    on_attach = mc.MapKeys
+    }
 }
 
 -- 设置扩展：
