@@ -4,6 +4,7 @@ local model = require("Key.Map.Library.Model")
 
 local map = model.Function.NormalMap()
 
+-- 缓冲区：
 map("<C-l>" , ":ls<CR>" , "List Buffers")
 
 -- 窗口：
@@ -20,7 +21,8 @@ map("<C-l>" , ":ls<CR>" , "List Buffers")
 	map("<leader>sr" , "<C-w>v" , "Split Right")
 
 -- 激活命令行：
-map(";" , ":" , "Activate Command Mode")
+-- 禁用：和 f 的继续查找键冲突
+-- map(";" , ":" , "Activate Command Mode")
 
 -- 更新文件：（未修改则不写入）
 map("<C-s>" , "<cmd>update<CR>" , "Save File")

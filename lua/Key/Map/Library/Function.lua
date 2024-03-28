@@ -9,10 +9,7 @@ function data.CreateModeMap(map , mode)
 			option = { }
 		end
 
-		if(description ~= nil)
-		then
-			option.desc = description
-		end
+		option.desc = description
 
 		return map(mode , source , target , option)
 	end
