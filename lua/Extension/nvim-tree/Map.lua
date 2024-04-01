@@ -50,10 +50,10 @@ function data.MapKeys(bufno)
     nmap("<C-f>" , "<C-w>w")
 
     -- 折叠所有项目：(ec: explorer collapse)
-    nmap("<leader>ec" , api.tree.collapse_all , "Collapse All" , bopt)
+    nmap("<Leader>ec" , api.tree.collapse_all , "Collapse All" , bopt)
 
     -- 重新加载树：(er: explorer reload)
-    -- nmap(<leader>er" , api.tree.reload , "Reload Explorer" , bopt)
+    -- nmap(<Leader>er" , api.tree.reload , "Reload Explorer" , bopt)
 
     nmap("<C-p>" , OutputNodePath , "Output Path of Node" , bopt)
 end
@@ -73,7 +73,12 @@ nmap("<C-h>" , api.tree.toggle , "Toggle Tree")
 nmap("<C-f>" , api.tree.focus , "Focus Tree")
 
 -- 定位文件：在树中定位当前缓冲区对应的文件
-nmap("<leader>ei" , api.tree.find_file , "Index File" , nopt)
+nmap("<Leader>ei" , api.tree.find_file , "Index File" , nopt)
+
+local vimmap = vim.keymap.set
+
+vimmap("n" , "<C-k>" , "<cmd>lua print('nvim-tree: hello')<CR>")
+vimmap("n" , "<Leader>sh" , "<cmd>lua print('nvim-tree: hello')<CR>")
 
 -- print("nvim-tree.Map$")
 
