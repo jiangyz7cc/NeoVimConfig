@@ -1,19 +1,19 @@
 return
 {
-    -- 配置：
-    -- { "folke/neoconf.nvim", cmd = "NeoConf" },
-    -- { "folke/neodev.nvim" },
+	-- 编辑：
+	-- { "tpope/vim-repeat" } -- 启用对于 . 的重复执行
+	-- { "tpope/vim-surround" } -- 自动添加环绕字符：( , < , "
 
 	-- 键：
     { "folke/which-key.nvim" , cmd = "WhichKey" }, -- 显示键映射
 
-    -- 文件管理：
+    -- 文件：
     -- { "nvim-neo-tree/neo-tree.nvim" },
     { "nvim-tree/nvim-tree.lua" } ,
+	-- { "simpledanro/rename.vim "} -- 在缓冲区中重命名文件
 
-	
 	-- 语言：
-	
+
 	-- LSP:
 	{ "williamboman/mason.nvim" } ,
 	{ "williamboman/mason-lspconfig.nvim" } ,
@@ -45,15 +45,32 @@ return
 	-- 语法：
 	{ "nvim-treesitter/nvim-treesitter" , cmd = "TreeSitter" } ,
 
-	-- 搜索：
+	-- 语言$
+
+	-- 导航：
+
+	-- 多域：
     {
 		'nvim-telescope/telescope.nvim' ,
 		tag = '0.1.6' ,
 		dependencies = { 'nvim-lua/plenary.nvim' }
     } ,
 
+	-- 文本：
+	{
+		'smoka7/hop.nvim' ,
+		version = "*" ,
+		opts = {} ,
+	} ,
+
+	-- 导航$
+
+    -- 配置：
+    -- { "folke/neoconf.nvim", cmd = "NeoConf" },
+    -- { "folke/neodev.nvim" },
+
     -- 图标：
-    { "nvim-tree/nvim-web-devicons" } ,
+	{ "nvim-tree/nvim-web-devicons" } ,
     {
         'nvim-lualine/lualine.nvim' ,
         dependencies = { 'nvim-tree/nvim-web-devicons' }
@@ -62,4 +79,5 @@ return
     -- 主题：
     { "EdenEast/nightfox.nvim" }
     -- { "folke/tokyonight.nvim" }
+
 }
