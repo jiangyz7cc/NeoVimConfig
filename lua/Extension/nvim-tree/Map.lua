@@ -8,20 +8,12 @@ local api = require("nvim-tree.api")
 
 local model = require("Key.Map.Library.Model")
 
-local nmap = model.Function.NormalMap()
-
-local function CreateMapOption()
-	return
-	{
-		noremap = true,
-		silent = true,
-		nowait = true
-	}
-end
+local nmap = model.Function.NormalMap
+local dopt = model.Option.CreateDefaultOption()
 
 -- no: buffer no
 local function CreateBufferMapOption(no)
-	local opt = CreateMapOption()
+	local opt = dopt
 
 	opt.buffer = no
 
@@ -74,7 +66,7 @@ end
 -- 	要先启动nvim-tree才能调用启动函数，这本来就不符合逻辑
 
 -- 正常选项：Normal Option
-local nopt = CreateMapOption()
+local nopt = model.Option.CreateDefaultOption()
 
 nmap("<C-h>" , api.tree.toggle , "Toggle Tree")
 

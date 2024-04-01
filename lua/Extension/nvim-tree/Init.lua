@@ -2,14 +2,14 @@
 
 local e = require("nvim-tree")
 local mc = require("Extension/nvim-tree/Map")
--- local cc = require("Extension/nvim-tree/Color")
+local cc = require("Extension/nvim-tree/Color")
 
 local opt =
 {
     on_attach = mc.MapKeys ,
 	root_dirs = { "$Home" } ,
 	sync_root_with_cwd = true ,
-    respect_buf_cwd = true ,
+    respect_buf_cwd = false ,
 	reload_on_bufenter = false ,
     select_prompts = true ,
     disable_netrw = true ,
@@ -58,5 +58,7 @@ local opt =
 
 -- 设置扩展：
 e.setup(opt)
+
+cc.SetColorForNodes()
 
 -- print("nvim-tree.Init$")

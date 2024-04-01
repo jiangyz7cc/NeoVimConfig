@@ -2,8 +2,8 @@
 
 local model = require("Key.Map.Library.Model")
 
-local map = model.Function.InsertMap()
-local opt = model.Option.CreateDefaultOption()
+local map = model.Function.InsertMap
+local opt = model.Option.DefaultOption
 
 map("jk" , "<Esc>" , "To Normal Mode" , opt)
 

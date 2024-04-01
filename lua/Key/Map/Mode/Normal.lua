@@ -2,7 +2,7 @@
 
 local model = require("Key.Map.Library.Model")
 
-local map = model.Function.NormalMap()
+local map = model.Function.NormalMap
 
 -- 缓冲区：
 map("<C-l>" , ":ls<CR>" , "List Buffers")

@@ -6,7 +6,7 @@ local o = vim.opt
 -- o.updatetime = 300
 
 -- 超时时间（输入悬空时的等待时间？）大小：
--- o.timeoutlen = 100
+o.timeoutlen = 500
 
 -- 使用系统剪切板
 o.clipboard:append("unnamedplus")

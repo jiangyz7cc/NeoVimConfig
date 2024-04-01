@@ -1,6 +1,6 @@
 local model = require("Key.Map.Library.Model")
 
-local map = model.Function.VisualMap()
+local map = model.Function.VisualMap
 
 -- 可视模式：
 map("K" , ":m '<-2<CR>gv=gv" , "Move Up")

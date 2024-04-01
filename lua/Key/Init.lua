@@ -1,1 +1,1 @@
-require("Key/Map/Init")
+require("Key.Map.Init")

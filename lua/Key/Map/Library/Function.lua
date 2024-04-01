@@ -15,20 +15,25 @@ function data.CreateModeMap(map , mode)
 	end
 end
 
-function data.NormalMap()
+function data.CreateNormalMap()
 	return data.CreateModeMap(vimmap , "n")
 end
 
-function data.InsertMap()
+function data.CreateInsertMap()
 	return data.CreateModeMap(vimmap , "i")
 end
 
-function data.VisualMap()
+function data.CreateVisualMap()
 	return data.CreateModeMap(vimmap , "v")
 end
 
-function data.CommandMap()
+function data.CreateCommandMap()
 	return data.CreateModeMap(vimmap , "c")
 end
+
+data.NormalMap = data.CreateNormalMap()
+data.InsertMap = data.CreateInsertMap()
+data.VisualMap = data.CreateVisualMap()
+data.CommandMap = data.CreateCommandMap()
 
 return data
