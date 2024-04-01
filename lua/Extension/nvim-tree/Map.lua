@@ -5,7 +5,6 @@
 local data = {}
 
 local api = require("nvim-tree.api")
-
 local model = require("Key.Map.Library.Model")
 
 local nmap = model.Function.NormalMap
@@ -27,11 +26,11 @@ local function OutputNodePath()
     print(path)
 end
 
--- 局部定义：
+-- 映射：
 
--- 映射函数：
+-- 局部：
 -- 范围：nvim-tree 缓冲区中
-function data.MapKeys(bufno)
+function data.MapLocalKeys(bufno)
 
 	-- 缓冲区选项：Buffer Option
 	local bopt = CreateBufferMapOption(bufno)
@@ -58,27 +57,29 @@ function data.MapKeys(bufno)
     nmap("<C-p>" , OutputNodePath , "Output Path of Node" , bopt)
 end
 
--- 全局定义：
+-- 全局：
+function data.MapGlobalKeys()
+	-- 注意：
+	-- 以下为全局映射
+	-- 如：Toggle() 作为切换，同时也是启动函数
+	-- 如果将映射定义放在局部映射函数中，将无法调用
 
--- 注意：
---	如 Toggle() 作为切换，同时也是启动函数
--- 	如果将映射定义放在局部定义函数中，将无法调用
--- 	要先启动nvim-tree才能调用启动函数，这本来就不符合逻辑
+	-- 正常选项：Normal Option
+	local nopt = model.Option.CreateDefaultOption()
 
--- 正常选项：Normal Option
-local nopt = model.Option.CreateDefaultOption()
+	nmap("<C-h>" , api.tree.toggle , "Toggle Tree")
 
-nmap("<C-h>" , api.tree.toggle , "Toggle Tree")
+	nmap("<C-f>" , api.tree.focus , "Focus Tree")
 
-nmap("<C-f>" , api.tree.focus , "Focus Tree")
+	-- 定位文件：在树中定位当前缓冲区对应的文件
+	nmap("<Leader>ei" , api.tree.find_file , "Index File" , nopt)
 
--- 定位文件：在树中定位当前缓冲区对应的文件
-nmap("<Leader>ei" , api.tree.find_file , "Index File" , nopt)
+	local vimmap = vim.keymap.set
 
-local vimmap = vim.keymap.set
+	vimmap("n" , "<C-k>" , "<cmd>lua print('nvim-tree: hello')<CR>")
+	vimmap("n" , "<Leader>sh" , "<cmd>lua print('nvim-tree: hello')<CR>")
 
-vimmap("n" , "<C-k>" , "<cmd>lua print('nvim-tree: hello')<CR>")
-vimmap("n" , "<Leader>sh" , "<cmd>lua print('nvim-tree: hello')<CR>")
+end
 
 -- print("nvim-tree.Map$")
 
