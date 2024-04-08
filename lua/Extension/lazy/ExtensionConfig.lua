@@ -31,8 +31,8 @@ return
 	{ "hrsh7th/vim-vsnip" } , -- 引擎
 	{ "hrsh7th/cmp-vsnip" } , -- 补全
 	{ "L3MON4D3/LuaSnip" } ,
-	-- { "saadparwaiz1/cmp_luasnip" } ,
-	-- { "rafamadriz/friendly-snippets" } ,
+	{ "saadparwaiz1/cmp_luasnip" } ,
+	{ "rafamadriz/friendly-snippets" } ,
 
 	-- { "numToStr/Comment.nvim" } ,
 	-- { "windwp/nvim-autopairs" } ,

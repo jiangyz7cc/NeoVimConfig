@@ -1,4 +1,4 @@
-print("Extension.telescope.Map:")
+-- print("Extension.telescope.Map:")
 
 local api = require('telescope.builtin')
 local model = require("Key.Map.Library.Model")
@@ -38,4 +38,4 @@ nmap("<leader>fh" , api.help_tags , "Find Help")
 -- nmap("<leader>fgc" , api.git_commits , "Find Git Commit")
 -- nmap("<leader>fgs" , api.git_status , "Find Git Status")
 
-print("Extension.telescope.Map$")
+-- print("Extension.telescope.Map$")
