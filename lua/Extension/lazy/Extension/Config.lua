@@ -1,9 +1,5 @@
 return
 {
-	-- 编辑：
-	-- { "tpope/vim-repeat" } , -- 启用对于 . 的重复执行
-	-- { "tpope/vim-surround" } , -- 自动添加环绕字符：( , < , "
-
 	-- 键：
 	-- 键映射提示：
     {
@@ -44,7 +40,7 @@ return
 	-- 扩展管理：
 	{
 		"williamboman/mason.nvim" ,
-		lazy = true ,
+		-- lazy = true ,
 		config =
 			function()
 				require("Extension.mason.Init")
@@ -54,7 +50,7 @@ return
 	-- 连接 mason 和 nvim-lspconfig：
 	{
 		"williamboman/mason-lspconfig.nvim" ,
-		lazy = true ,
+		-- lazy = true ,
 		config =
 			function()
 				require("Extension.mason-lspconfig.Init")
@@ -70,15 +66,24 @@ return
 	-- { "hrsh7th/cmp-buffer" } ,
 	-- { "hrsh7th/cmp-cmdline" } ,
 
+	-- 补全对：（如：() [] "" '' ...）
+	{
+		'windwp/nvim-autopairs' ,
+		event = "InsertEnter" ,
+		config = true ,
+		opts = {}
+	},
+
 	-- 片段：
 	-- { "hrsh7th/vim-vsnip" } , -- 引擎
 	-- { "hrsh7th/cmp-vsnip" } , -- 补全
 	{ "L3MON4D3/LuaSnip" } ,
 	{ "saadparwaiz1/cmp_luasnip" } ,
-	-- { "rafamadriz/friendly-snippets" } ,
+	{ "rafamadriz/friendly-snippets" } ,
 
+	-- 注释：
 	-- { "numToStr/Comment.nvim" } ,
-	-- { "windwp/nvim-autopairs" } ,
+
 	-- { "akinsho/bufferline.nvim" } ,
 	-- { "lewis6991/gitsigns.nvim" }
 
