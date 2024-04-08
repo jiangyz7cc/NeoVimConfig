@@ -9,7 +9,7 @@ return
     {
 		"folke/which-key.nvim" ,
 		lazy = true ,
-		cmd = "WhichKey" ,
+		cmd = "StartWhichKey" ,
 		config =
 			function()
 				require("Extension.which-key.Init")
@@ -86,7 +86,7 @@ return
 	{
 		"nvim-treesitter/nvim-treesitter" ,
 		lazy = true ,
-		cmd = "TreeSitter" ,
+		cmd = "StartTreeSitter" ,
 		config =
 			function()
 				require("Extension.nvim-treesitter.Init")
@@ -106,6 +106,7 @@ return
     {
 		"nvim-telescope/telescope.nvim" ,
 		dependencies = { "nvim-lua/plenary.nvim" } ,
+		cmd = "StartTelescope" ,
 		lazy = true ,
 		config =
 			function()

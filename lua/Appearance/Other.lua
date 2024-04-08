@@ -12,5 +12,6 @@ local o = vim.opt
 	-- 界面颜色：
 	o.termguicolors = true
 
--- 设置程序窗口的标题：显示当前程序路径
-	o.title = true
+-- 窗口：
+	-- 标题：设置为显示当前程序路径
+		o.title = true

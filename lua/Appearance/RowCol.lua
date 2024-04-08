@@ -8,6 +8,8 @@ local o = vim.opt
 	-- 相对号：
 	o.relativenumber = true
 
+	-- o.cursorline = true
+
 -- 列：
 	-- 标记列：
 	o.signcolumn = "yes"

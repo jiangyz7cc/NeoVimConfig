@@ -2,6 +2,10 @@
 
 local cmd = vim.cmd
 
+cmd("colorscheme carbonfox")
+
+return
+
 --[[
 	nightfox系列：
 		carbonfox
@@ -14,5 +18,3 @@ local cmd = vim.cmd
 		tokyonight-day
 		tokyonight-night
 --]]
-
-cmd("colorscheme carbonfox")
