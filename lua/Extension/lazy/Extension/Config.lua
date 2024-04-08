@@ -5,11 +5,31 @@ return
 	-- { "tpope/vim-surround" } , -- 自动添加环绕字符：( , < , "
 
 	-- 键：
-    { "folke/which-key.nvim" , cmd = "WhichKey" } , -- 显示键映射
+	-- 键映射提示：
+    {
+		"folke/which-key.nvim" ,
+		lazy = true ,
+		cmd = "WhichKey" ,
+		config =
+			function()
+				require("Extension.which-key.Init")
+			end
+	} ,
 
     -- 文件：
     -- { "nvim-neo-tree/neo-tree.nvim" } ,
-    { "nvim-tree/nvim-tree.lua" } ,
+    {
+		"nvim-tree/nvim-tree.lua" ,
+		lazy = true ,
+		keys =
+		{
+			{ "<C-h>" , "<cmd>NvimTreeToggle<CR>" , desc = "NVimTree: Toggle" } ,
+		} ,
+		config =
+			function()
+				require("Extension.nvim-tree.Init")
+			end
+	} ,
 
 	-- 在缓冲区中重命名文件：
 	-- { "simpledanro/rename.vim "} ,
@@ -22,10 +42,24 @@ return
 	{ "neovim/nvim-lspconfig" } ,
 
 	-- 扩展管理：
-	{ "williamboman/mason.nvim" } ,
+	{
+		"williamboman/mason.nvim" ,
+		lazy = true ,
+		config =
+			function()
+				require("Extension.mason.Init")
+			end
+	} ,
 
 	-- 连接 mason 和 nvim-lspconfig：
-	{ "williamboman/mason-lspconfig.nvim" } ,
+	{
+		"williamboman/mason-lspconfig.nvim" ,
+		lazy = true ,
+		config =
+			function()
+				require("Extension.mason-lspconfig.Init")
+			end
+	} ,
 
 	-- LSP$
 
@@ -39,9 +73,9 @@ return
 	-- 片段：
 	-- { "hrsh7th/vim-vsnip" } , -- 引擎
 	-- { "hrsh7th/cmp-vsnip" } , -- 补全
-	-- { "L3MON4D3/LuaSnip" } ,
+	{ "L3MON4D3/LuaSnip" } ,
 	{ "saadparwaiz1/cmp_luasnip" } ,
-	{ "rafamadriz/friendly-snippets" } ,
+	-- { "rafamadriz/friendly-snippets" } ,
 
 	-- { "numToStr/Comment.nvim" } ,
 	-- { "windwp/nvim-autopairs" } ,
@@ -49,7 +83,15 @@ return
 	-- { "lewis6991/gitsigns.nvim" }
 
 	-- 语法：
-	{ "nvim-treesitter/nvim-treesitter" } ,
+	{
+		"nvim-treesitter/nvim-treesitter" ,
+		lazy = true ,
+		cmd = "TreeSitter" ,
+		config =
+			function()
+				require("Extension.nvim-treesitter.Init")
+			end
+	} ,
 
 	-- 语言$
 
@@ -63,7 +105,12 @@ return
 	-- 多域：（文件、缓冲区 ...）
     {
 		"nvim-telescope/telescope.nvim" ,
-		dependencies = { "nvim-lua/plenary.nvim" }
+		dependencies = { "nvim-lua/plenary.nvim" } ,
+		lazy = true ,
+		config =
+			function()
+				require("Extension.telescope.Init")
+			end
     } ,
 
 	-- 导航$
@@ -75,17 +122,31 @@ return
 	-- 外观：
 
     -- 图标：
-	{ "nvim-tree/nvim-web-devicons" } ,
+	{
+		"nvim-tree/nvim-web-devicons" ,
+		lazy = true
+	} ,
 
 	-- 状态栏：
 	{
 		"nvim-lualine/lualine.nvim" ,
-        dependencies = { "nvim-tree/nvim-web-devicons" }
+        dependencies = { "nvim-tree/nvim-web-devicons" } ,
+		lazy = false ,
+		config =
+			function()
+				require("Extension.lualine.Init")
+			end
 	},
 
     -- 主题：
-    { "EdenEast/nightfox.nvim" },
-    { "folke/tokyonight.nvim" }
+    {
+		"EdenEast/nightfox.nvim" ,
+		lazy = false
+	}
+    -- {
+	-- 	"folke/tokyonight.nvim" ,
+	-- 	lazy = true
+	-- }
 
 	-- 外观$
 }
