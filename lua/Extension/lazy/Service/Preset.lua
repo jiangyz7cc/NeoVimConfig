@@ -12,6 +12,10 @@ function data.SetRuntimeEnvironment()
 	data.SetRuntimePath()
 end
 
+function data.Init()
+	data.SetRuntimeEnvironment()
+end
+
 ---@type function
 function data.InitAsFirstRun()
 	local psv = require("Extension.lazy.Service.Path")
@@ -29,6 +33,8 @@ function data.InitAsFirstRun()
 	local dsv = require("Extension.lazy.Service.Download")
 
 	dsv.DownloadSelf(edp)
+
+	data.Init()
 end
 
 return data

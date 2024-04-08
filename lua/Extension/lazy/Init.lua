@@ -3,7 +3,7 @@
 local p = require("Extension.lazy.Service.Preset")
 
 -- p.InitAsFirstRun()
-p.SetRuntimeEnvironment()
+p.Init()
 
 local e = require("lazy")
 local c = require("Extension.lazy.Extension.Config")
