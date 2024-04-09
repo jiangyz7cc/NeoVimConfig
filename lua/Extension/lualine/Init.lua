@@ -9,7 +9,7 @@ local function GetMyName()
     return [[ jiangyz ]]
 end
 
-local opt =
+local config =
 {
     options =
     {
@@ -58,7 +58,8 @@ local opt =
             -- '%t%m',
             -- '%3p',
             -- "un" ,
-            "selectioncount",
+			GetMyName ,
+            "selectioncount" ,
             "searchcount"
             -- 'filetype'
             -- 'branch',
@@ -116,4 +117,6 @@ local opt =
     extensions = {}
 }
 
-require('lualine').setup(opt)
+local e = require('lualine')
+
+e.setup(config)

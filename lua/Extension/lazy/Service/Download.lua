@@ -1,6 +1,6 @@
 local data = {}
 
-function data.Download(dp)
+function data.DownloadSelf(dp)
     vim.fn.system(
 		{
 			"git",

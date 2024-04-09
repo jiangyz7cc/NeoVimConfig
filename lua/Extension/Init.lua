@@ -1,10 +1,4 @@
 require("Extension.lazy.Init")
-require("Extension.nvim-tree.Init")
-require("Extension.mason.Init")
-require("Extension.mason-lspconfig.Init")
-require("Extension.nvim-treesitter.Init")
+
 require("Extension.lsp.Init")
 require("Extension.cmp.Init")
-require("Extension.telescope.Init")
-require("Extension.which-key.Init")
-require("Extension.lualine.Init")

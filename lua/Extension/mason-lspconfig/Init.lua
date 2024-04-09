@@ -1,13 +1,10 @@
-local opt =
+local lsplist = require("Extension.mason-lspconfig.LSP.List")
+
+local c =
 {
-	ensure_installed =
-	{
-		"lua_ls" ,
-		"clangd" ,
-		"csharp_ls"
-	},
+	ensure_installed = lsplist
 }
 
 local e = require("mason-lspconfig")
 
-e.setup(opt)
+e.setup(c)

@@ -6,7 +6,7 @@ local o = vim.opt
 o.mouse = 'a'
 
 -- 闪烁：间隔1000毫秒一次
-o.guicursor:append('a:blinkon1000-blinkoff1000-blinkwait1000')
+-- o.guicursor:append('a:blinkon1000-blinkoff1000-blinkwait1000')
 
 -- 高亮行：
 -- o.cursorcolumn = true

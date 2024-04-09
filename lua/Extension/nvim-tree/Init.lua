@@ -13,7 +13,6 @@ local opt =
 	reload_on_bufenter = false ,
     select_prompts = true ,
     disable_netrw = true ,
-	-- highlight_bookmarks = "all" ,
     filters =
     {
         dotfiles = true ,
