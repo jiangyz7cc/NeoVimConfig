@@ -82,7 +82,21 @@ return
 	{ "rafamadriz/friendly-snippets" } ,
 
 	-- 注释：
-	{ "numToStr/Comment.nvim" } ,
+	{
+		"numToStr/Comment.nvim" ,
+		lazy = false ,
+		opts =
+		{
+
+		} ,
+		config =
+		function()
+			require("Extension.Comment.Init")
+		end
+
+		-- Doc:
+		-- :help comment-nvim
+	} ,
 
 	-- { "akinsho/bufferline.nvim" } ,
 	-- { "lewis6991/gitsigns.nvim" }
