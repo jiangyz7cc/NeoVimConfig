@@ -62,9 +62,9 @@ return
     -- 补全：
 	{ "hrsh7th/nvim-cmp" } ,
 	{ "hrsh7th/cmp-nvim-lsp" } ,
-	-- { "hrsh7th/cmp-path" } ,
-	-- { "hrsh7th/cmp-buffer" } ,
-	-- { "hrsh7th/cmp-cmdline" } ,
+	{ "hrsh7th/cmp-path" } ,
+	{ "hrsh7th/cmp-buffer" } ,
+	{ "hrsh7th/cmp-cmdline" } ,
 
 	-- 补全对：（如：() [] "" '' ...）
 	{
@@ -75,14 +75,14 @@ return
 	},
 
 	-- 片段：
-	-- { "hrsh7th/vim-vsnip" } , -- 引擎
-	-- { "hrsh7th/cmp-vsnip" } , -- 补全
+	{ "hrsh7th/vim-vsnip" } , -- 引擎
+	{ "hrsh7th/cmp-vsnip" } , -- 补全
 	{ "L3MON4D3/LuaSnip" } ,
 	{ "saadparwaiz1/cmp_luasnip" } ,
 	{ "rafamadriz/friendly-snippets" } ,
 
 	-- 注释：
-	-- { "numToStr/Comment.nvim" } ,
+	{ "numToStr/Comment.nvim" } ,
 
 	-- { "akinsho/bufferline.nvim" } ,
 	-- { "lewis6991/gitsigns.nvim" }
