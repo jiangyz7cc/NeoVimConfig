@@ -1,7 +1,6 @@
 local data = {}
 
 function data.SetColorForNodes()
-    -- 使用命令：:NvimTreeHiTest 显示图标，并对图标和文本上色
     vim.cmd(
         [[
             :hi      NvimTreeExecFile    guifg=#ffa0a0
@@ -11,5 +10,7 @@ function data.SetColorForNodes()
         ]]
     )
 end
+
+-- 命令：:NvimTreeHiTest 测试着色
 
 return data

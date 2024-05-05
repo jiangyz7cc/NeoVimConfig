@@ -46,7 +46,7 @@ function data.MapLocalKeys(bufno)
 
     -- 调用：<C-f> 的反作用函数：回到之前的窗口
     -- 从而可以实现 <C-f> 来在编辑和文件管理器之间来回切换
-    nmap("<C-f>" , "<C-w>w")
+    nmap("<C-f>" , "<C-w>w" , "Back" , bopt)
 
     -- 折叠所有项目：(ec: explorer collapse)
     nmap("<Leader>ec" , api.tree.collapse_all , "Collapse All" , bopt)

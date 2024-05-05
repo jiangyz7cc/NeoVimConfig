@@ -3,7 +3,7 @@ local data = {}
 local vimmap = vim.keymap.set
 
 function data.CreateModeMap(map , mode)
-	return function (source , target , description , option)
+	return function(source , target , description , option)
 		if(option == nil)
 		then
 			option = { }
