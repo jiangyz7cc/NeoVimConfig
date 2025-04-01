@@ -1,10 +1,11 @@
 local e = require("hop")
 
-e.setup(
-	{
-		keys = 'etovxqpdygfblzhckisuran'
-	}
-)
+local c =
+{
+	keys = 'etovxqpdygfblzhckisuran'
+}
+
+e.setup(c)
 
 local mc = require("Extension.hop.Map")
 

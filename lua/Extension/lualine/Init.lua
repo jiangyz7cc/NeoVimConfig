@@ -69,10 +69,10 @@ local config =
 
         lualine_x =
         {
-            GetTime
+            -- GetTime
             -- "filesize"
             -- "buffers"
-            -- "encoding"
+            "encoding"
             -- 'fileformat',
         },
         lualine_y =
