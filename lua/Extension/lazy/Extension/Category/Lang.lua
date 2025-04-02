@@ -11,7 +11,7 @@ return
 	-- 扩展管理：
 	{
 		"williamboman/mason.nvim" ,
-		lazy = true ,
+		-- lazy = true ,
 		config =
 			function()
 				require("Extension.mason.Init")
@@ -38,7 +38,14 @@ return
 	-- LSP$
 
     -- 补全：
-	{ "hrsh7th/nvim-cmp" } ,
+	{
+		"hrsh7th/nvim-cmp" ,
+		dependencies =
+		{
+			"LuaSnip"
+		}
+	} ,
+
 	{ "hrsh7th/cmp-nvim-lsp" } ,
 	{ "hrsh7th/cmp-path" } ,
 	{ "hrsh7th/cmp-buffer" } ,
@@ -53,9 +60,17 @@ return
 	},
 
 	-- 片段：
-	{ "hrsh7th/vim-vsnip" } , -- 引擎
-	{ "hrsh7th/cmp-vsnip" } , -- 补全
-	{ "L3MON4D3/LuaSnip" } ,
+	-- 引擎
+	{
+		"hrsh7th/vim-vsnip"
+	} ,
+	-- 补全
+	{
+		"hrsh7th/cmp-vsnip"
+	} ,
+	{
+		"L3MON4D3/LuaSnip" ,
+	} ,
 	-- { "saadparwaiz1/cmp_luasnip" } ,
 	-- { "rafamadriz/friendly-snippets" } ,
 
