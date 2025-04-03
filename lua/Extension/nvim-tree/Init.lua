@@ -84,7 +84,7 @@ local c =
 			show =
 			{
 				folder = false ,
-				folder_arrow = false ,
+				folder_arrow = true ,
 				file = false ,
 				bookmarks = true ,
 				diagnostics = true ,

@@ -1,7 +1,8 @@
 return
 {
 	-- 键：
-	-- 键映射提示：
+	
+	-- 映射提示：
     {
 		"folke/which-key.nvim" ,
 		lazy = true ,
@@ -13,6 +14,8 @@ return
 	} ,
 
     -- 文件：
+	
+	-- 管理:
     -- { "nvim-neo-tree/neo-tree.nvim" } ,
     {
 		"nvim-tree/nvim-tree.lua" ,
@@ -27,7 +30,7 @@ return
 			end
 	} ,
 
-	-- 在缓冲区中重命名文件：
+	-- 重命名：
 	-- { "simpledanro/rename.vim "} ,
 
 	-- 语言：
@@ -40,7 +43,8 @@ return
 	-- 扩展管理：
 	{
 		"williamboman/mason.nvim" ,
-		-- lazy = true ,
+		lazy = true ,
+		cmd = "StartLSP" ,
 		config =
 			function()
 				require("Extension.mason.Init")
@@ -50,7 +54,8 @@ return
 	-- 连接 mason 和 nvim-lspconfig：
 	{
 		"williamboman/mason-lspconfig.nvim" ,
-		-- lazy = true ,
+		lazy = true ,
+		cmd = "StartLSP" ,
 		config =
 			function()
 				require("Extension.mason-lspconfig.Init")
@@ -60,8 +65,19 @@ return
 	-- LSP$
 
     -- 补全：
-	{ "hrsh7th/nvim-cmp" } ,
-	{ "hrsh7th/cmp-nvim-lsp" } ,
+	{
+		"hrsh7th/nvim-cmp"
+		-- lazy = true ,
+		-- cmd = "StartLSP"
+	} ,
+	{
+		"hrsh7th/cmp-nvim-lsp" ,
+		-- lazy = true ,
+		-- cmd = "StartLSP"
+		config = function()
+			require("Extension.nvim-cmp.Init")
+		end
+	} ,
 	{ "hrsh7th/cmp-path" } ,
 	{ "hrsh7th/cmp-buffer" } ,
 	{ "hrsh7th/cmp-cmdline" } ,
@@ -71,7 +87,10 @@ return
 		'windwp/nvim-autopairs' ,
 		event = "InsertEnter" ,
 		config = true ,
-		opts = {}
+		opts =
+		{
+
+		}
 	},
 
 	-- 片段：
@@ -90,15 +109,15 @@ return
 
 		} ,
 		config =
-		function()
-			require("Extension.Comment.Init")
-		end
+			function()
+				require("Extension.Comment.Init")
+			end
 
 		-- Doc:
 		-- :help comment-nvim
 	} ,
 
-	-- { "akinsho/bufferline.nvim" } ,
+	{ "akinsho/bufferline.nvim" } ,
 	-- { "lewis6991/gitsigns.nvim" }
 
 	-- 语法：
