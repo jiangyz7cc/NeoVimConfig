@@ -42,7 +42,7 @@ local c =
     ---Function to call before (un)comment
     pre_hook = nil,
     ---Function to call after (un)comment
-    post_hook = nil,
+    post_hook = nil
 }
 
 e.setup(c)

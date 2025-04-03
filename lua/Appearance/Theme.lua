@@ -2,7 +2,7 @@
 
 local cmd = vim.cmd
 
-cmd("colorscheme carbonfox")
+cmd("colorscheme retrobox")
 
 return
 

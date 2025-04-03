@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 local data = {}
 
 local model = require("Key.Map.Library.Model")
