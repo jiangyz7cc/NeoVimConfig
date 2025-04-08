@@ -14,7 +14,7 @@ local names =
 local fullNames = {}
 
 for index , suffix in ipairs(names) do
-	fullNames[index] = require(prefix .. suffix)
+	fullNames[index] = require(prefix .. "." .. suffix)
 end
 
 return fullNames
