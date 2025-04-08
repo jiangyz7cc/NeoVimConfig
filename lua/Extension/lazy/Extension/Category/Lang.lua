@@ -19,8 +19,8 @@ return
 	-- 连接：mason 和 nvim-lspconfig：
 	{
 		"williamboman/mason-lspconfig.nvim" ,
-		lazy = true ,
-		event = "LspAttach" ,
+		-- lazy = true ,
+		-- event = "LspAttach" ,
 		dependencies =
 		{
 			"williamboman/mason.nvim"
@@ -50,6 +50,14 @@ return
 	{ "hrsh7th/cmp-path" } ,
 	{ "hrsh7th/cmp-buffer" } ,
 	{ "hrsh7th/cmp-cmdline" } ,
+	{
+		"hrsh7th/cmp-vsnip"
+	} ,
+	{
+		"L3MON4D3/LuaSnip" ,
+	} ,
+	{ "saadparwaiz1/cmp_luasnip" } ,
+	{ "rafamadriz/friendly-snippets" } ,
 
 	-- 对：() [] "" '' ...
 	{
@@ -64,15 +72,6 @@ return
 	{
 		"hrsh7th/vim-vsnip"
 	} ,
-	-- 补全
-	{
-		"hrsh7th/cmp-vsnip"
-	} ,
-	{
-		"L3MON4D3/LuaSnip" ,
-	} ,
-	-- { "saadparwaiz1/cmp_luasnip" } ,
-	-- { "rafamadriz/friendly-snippets" } ,
 
 	-- 注释：
 	{

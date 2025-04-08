@@ -1,4 +1,4 @@
-local c =
+local config =
 {
 	ui =
 	{
@@ -11,6 +11,6 @@ local c =
 	}
 }
 
-local e = require("mason")
+local extension = require("mason")
 
-e.setup(c)
+extension.setup(config)

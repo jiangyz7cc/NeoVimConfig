@@ -2,7 +2,6 @@
 
 local p = require("Extension.lazy.Service.Preset")
 
--- p.InitAsFirstRun()
 p.Init()
 
 local e = require("lazy")

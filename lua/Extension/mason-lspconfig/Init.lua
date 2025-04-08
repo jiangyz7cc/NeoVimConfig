@@ -1,10 +1,10 @@
 local lsplist = require("Extension.mason-lspconfig.LSP.List")
 
-local c =
+local config =
 {
 	ensure_installed = lsplist
 }
 
-local e = require("mason-lspconfig")
+local extension = require("mason-lspconfig")
 
-e.setup(c)
+extension.setup(config)

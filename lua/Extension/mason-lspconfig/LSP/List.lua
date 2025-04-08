@@ -1,7 +1,7 @@
 return
 {
 	"lua_ls" ,
-	"clangd" ,
+	"omnisharp"
 	-- "csharp_ls" ,
-	"ominisharp"
+	-- "clangd"
 }
