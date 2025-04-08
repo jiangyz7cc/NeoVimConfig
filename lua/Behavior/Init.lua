@@ -9,6 +9,7 @@ require("Behavior/Wrap")
 require("Behavior/Text")
 require("Behavior/Buffer")
 require("Behavior/Window")
--- require("Behavior/Curor")
 
 require("Behavior/Other")
+
+require("Behavior/CheckDifference")
