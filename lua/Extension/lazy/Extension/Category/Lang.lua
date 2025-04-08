@@ -16,7 +16,7 @@ return
 			end
 	} ,
 
-	-- 桥接：连接 mason 和 nvim-lspconfig：
+	-- 连接：mason 和 nvim-lspconfig：
 	{
 		"williamboman/mason-lspconfig.nvim" ,
 		lazy = true ,
@@ -25,8 +25,10 @@ return
 		{
 			"williamboman/mason.nvim"
 		} ,
-		-- 保持原有配置
-		opts = { automatic_installation = true } ,
+		opts =
+		{
+			automatic_installation = true
+		} ,
 		config =
 			function()
 				require("Extension.mason-lspconfig.Init")

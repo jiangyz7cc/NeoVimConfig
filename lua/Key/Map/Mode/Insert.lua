@@ -20,3 +20,9 @@ map("<C-k>", "<Up>" , "Move Up")
 map("<C-j>", "<Down>" , "Move Down")
 map("<C-h>", "<Left>" , "Move Left")
 map("<C-l>", "<Right>" , "Move Right")
+
+function GetTimeString()
+	return vim.fn.strftime('%H:%M:%S')
+end
+
+map("@time" , GetTimeString , "GetTimeString" , { expr = true , noremap = true })

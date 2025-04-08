@@ -1,39 +1,40 @@
-local data = {}
+local module = {}
 
 local vimmap = vim.keymap.set
 
-function data.CreateModeMap(map , mode)
-	return function(source , target , description , option)
+function module.CreateModeMap(map , mode)
+	return
+	function(source , target , description , option)
 		if(option == nil)
-		then
-			option = { }
-		end
+			then
+				option = { }
+			end
 
-		option.desc = description
+			option.desc = description
 
-		return map(mode , source , target , option)
+			return map(mode , source , target , option)
 	end
 end
 
-function data.CreateNormalMap()
-	return data.CreateModeMap(vimmap , "n")
+function module.CreateNormalMap()
+	return module.CreateModeMap(vimmap , "n")
 end
 
-function data.CreateInsertMap()
-	return data.CreateModeMap(vimmap , "i")
+function module.CreateInsertMap()
+	return module.CreateModeMap(vimmap , "i")
 end
 
-function data.CreateVisualMap()
-	return data.CreateModeMap(vimmap , "v")
+function module.CreateVisualMap()
+	return module.CreateModeMap(vimmap , "v")
 end
 
-function data.CreateCommandMap()
-	return data.CreateModeMap(vimmap , "c")
+function module.CreateCommandMap()
+	return module.CreateModeMap(vimmap , "c")
 end
 
-data.NormalMap = data.CreateNormalMap()
-data.InsertMap = data.CreateInsertMap()
-data.VisualMap = data.CreateVisualMap()
-data.CommandMap = data.CreateCommandMap()
+module.NormalMap = module.CreateNormalMap()
+module.InsertMap = module.CreateInsertMap()
+module.VisualMap = module.CreateVisualMap()
+module.CommandMap = module.CreateCommandMap()
 
-return data
+return module
