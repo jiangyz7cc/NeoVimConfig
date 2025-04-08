@@ -1,7 +1,5 @@
 return
 {
-	-- 外观：
-
     -- 图标：
 	{
 		"nvim-tree/nvim-web-devicons" ,
@@ -15,7 +13,10 @@ return
 		event = "UIEnter" ,
 		priority = 300 ,
         dependencies = { "nvim-tree/nvim-web-devicons" } ,
-		opts = { theme = "auto" }
+		opts =
+		{
+			theme = "auto"
+		}
 		-- config =
 		-- 	function()
 		-- 		require("Extension.lualine.Init")
@@ -31,6 +32,4 @@ return
 	-- 	"folke/tokyonight.nvim" ,
 	-- 	lazy = true
 	-- }
-
-	-- 外观$
 }

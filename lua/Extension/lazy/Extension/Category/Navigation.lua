@@ -1,7 +1,5 @@
 return
 {
-	-- 导航：
-
 	-- 文本：
 	{
 		"smoka7/hop.nvim" ,
@@ -23,7 +21,5 @@ return
 			function()
 				require("Extension.telescope.Init")
 			end
-    } ,
-
-	-- 导航$
+    }
 }

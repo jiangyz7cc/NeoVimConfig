@@ -1,7 +1,5 @@
 return
 {
-	-- 键：
-
 	-- 映射提示：
     {
 		"folke/which-key.nvim" ,

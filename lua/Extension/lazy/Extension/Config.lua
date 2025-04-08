@@ -1,18 +1,20 @@
-local preset = require("Extension.lazy.Extension.Category.Preset")
-local file = require ("Extension.lazy.Extension.Category.File")
-local lang = require ("Extension.lazy.Extension.Category.Lang")
-local key = require ("Extension.lazy.Extension.Category.Key")
-local navi = require ("Extension.lazy.Extension.Category.Navigation")
-local other = require ("Extension.lazy.Extension.Category.Other")
-local appear = require ("Extension.lazy.Extension.Category.Appearance")
+local prefix = "Extension.lazy.Extension.Category"
 
-return
+local names =
 {
-	preset ,
-	file ,
-	lang ,
-	key ,
-	navi ,
-	other ,
-	appear
+	"preset" ,
+	"file" ,
+	"lang" ,
+	"key" ,
+	"navigation" ,
+	"other" ,
+	"appearance"
 }
+
+local fullNames = {}
+
+for index , suffix in ipairs(names) do
+	fullNames[index] = require(prefix .. suffix)
+end
+
+return fullNames

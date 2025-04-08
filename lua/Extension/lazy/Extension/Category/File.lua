@@ -1,7 +1,5 @@
 return
 {
-    -- 文件：
-
     -- { "nvim-neo-tree/neo-tree.nvim" } ,
     {
 		"nvim-tree/nvim-tree.lua" ,

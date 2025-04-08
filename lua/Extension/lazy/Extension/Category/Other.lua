@@ -1,5 +1,6 @@
 return
 {
+	-- 开发：
     {
 		"folke/neodev.nvim" ,
 		lazy = true , 
@@ -20,7 +21,7 @@ return
 			end
 	} ,
 
-    -- 配置：
+    -- 设置：
     {
 		"folke/neoconf.nvim" ,
 		lazy = true ,
