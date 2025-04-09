@@ -1,7 +1,9 @@
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-require("neodev").setup({
-  -- add any options here, or leave empty to use the default settings
-})
+require("neodev").setup(
+	{
+		-- 设置：留空则使用默认配置
+	}
+)
 
 -- then setup your lsp server as usual
 local lspconfig = require('lspconfig')

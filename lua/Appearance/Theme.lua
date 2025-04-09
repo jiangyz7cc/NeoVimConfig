@@ -2,11 +2,14 @@
 
 local cmd = vim.cmd
 
-cmd("colorscheme retrobox")
+cmd("colorscheme habamax")
 
 return
 
 --[[
+	官方自带：
+		habamax
+
 	nightfox系列：
 		carbonfox
 		dawnfox

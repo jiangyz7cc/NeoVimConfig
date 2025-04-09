@@ -1,8 +1,12 @@
-local lsplist = require("Extension.mason-lspconfig.LSP.List")
+-- local lsplist = require("LSP.List")
 
 local config =
 {
-	ensure_installed = lsplist
+	ensure_installed =
+	{
+		"lua_ls" ,
+		"omnisharp"
+	}
 }
 
 local extension = require("mason-lspconfig")

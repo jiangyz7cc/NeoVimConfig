@@ -38,26 +38,56 @@ return
 	-- LSP$
 
     -- 补全：
+	-- 通用服务框架：
 	{
 		"hrsh7th/nvim-cmp" ,
 		dependencies =
 		{
 			"LuaSnip"
-		}
+		} ,
+		config =
+			function()
+				require("Extension.nvim-cmp.Init")
+			end
 	} ,
 
-	{ "hrsh7th/cmp-nvim-lsp" } ,
-	{ "hrsh7th/cmp-path" } ,
-	{ "hrsh7th/cmp-buffer" } ,
-	{ "hrsh7th/cmp-cmdline" } ,
+	-- 来源：
+
+	-- LSP：
+	{
+		"hrsh7th/cmp-nvim-lsp"
+	} ,
+
+	-- 文件路径：
+	{
+		"hrsh7th/cmp-path"
+	} ,
+
+	-- 缓冲区内容：
+	{
+		"hrsh7th/cmp-buffer"
+	} ,
+
+	-- 命令行：
+	{
+		"hrsh7th/cmp-cmdline"
+	} ,
+
+	-- 片段： 
 	{
 		"hrsh7th/cmp-vsnip"
 	} ,
+
 	{
-		"L3MON4D3/LuaSnip" ,
+		"L3MON4D3/LuaSnip"
 	} ,
-	{ "saadparwaiz1/cmp_luasnip" } ,
-	{ "rafamadriz/friendly-snippets" } ,
+
+	{
+		"saadparwaiz1/cmp_luasnip"
+	} ,
+	{
+		"rafamadriz/friendly-snippets"
+	} ,
 
 	-- 对：() [] "" '' ...
 	{
@@ -68,13 +98,15 @@ return
 	},
 
 	-- 片段：
-	-- 引擎
 	{
 		"hrsh7th/vim-vsnip"
 	} ,
 
 	-- 注释：
 	{
+		-- 文档：
+		-- :help comment-nvim
+
 		"numToStr/Comment.nvim" ,
 		lazy = false ,
 		opts =
@@ -85,9 +117,6 @@ return
 		function()
 			require("Extension.Comment.Init")
 		end
-
-		-- Doc:
-		-- :help comment-nvim
 	} ,
 
 	-- { "akinsho/bufferline.nvim" } ,
