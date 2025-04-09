@@ -11,6 +11,6 @@ local config =
 	}
 }
 
-local extension = require("mason")
+local e = require("mason")
 
-extension.setup(config)
+e.setup(config)

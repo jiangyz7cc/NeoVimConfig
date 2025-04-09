@@ -41,6 +41,8 @@ return
 	-- 通用服务框架：
 	{
 		"hrsh7th/nvim-cmp" ,
+		lazy = true ,
+		event = "InsertEnter" ,
 		dependencies =
 		{
 			"LuaSnip"
@@ -126,10 +128,22 @@ return
 	{
 		"nvim-treesitter/nvim-treesitter" ,
 		lazy = true ,
-		cmd = "StartTreeSitter" ,
+		event = "InsertEnter" ,
+		-- cmd = "StartTreeSitter" ,
 		config =
 			function()
 				require("Extension.nvim-treesitter.Init")
 			end
+	} ,
+
+	{
+		"nvimdev/lspsaga.nvim" ,
+		config = function()
+			require('lspsaga').setup({})
+		end ,
+		dependencies = {
+			'nvim-treesitter/nvim-treesitter' ,
+			'nvim-tree/nvim-web-devicons'
+		}
 	}
 }
