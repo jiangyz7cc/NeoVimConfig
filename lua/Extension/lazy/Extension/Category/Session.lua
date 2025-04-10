@@ -2,9 +2,13 @@ return
 {
 	{
 		"Shatur/neovim-session-manager",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies =
+		{
+			"nvim-lua/plenary.nvim"
+		},
 		config = function()
 			local path = require('plenary.path')
+
 			require("session_manager").setup(
 					{
 						sessions_dir = path:new('~/.config/nvim/sessions'), -- 自定义保存目录

@@ -19,8 +19,8 @@ return
 	-- 连接：mason 和 nvim-lspconfig：
 	{
 		"williamboman/mason-lspconfig.nvim" ,
-		-- lazy = true ,
-		-- event = "LspAttach" ,
+		lazy = true ,
+		event = "LspAttach" ,
 		dependencies =
 		{
 			"williamboman/mason.nvim"
@@ -71,9 +71,9 @@ return
 	} ,
 
 	-- 命令行：
-	{
-		"hrsh7th/cmp-cmdline"
-	} ,
+	-- {
+	-- 	"hrsh7th/cmp-cmdline"
+	-- } ,
 
 	-- 片段： 
 	{
@@ -84,9 +84,10 @@ return
 		"L3MON4D3/LuaSnip"
 	} ,
 
-	{
-		"saadparwaiz1/cmp_luasnip"
-	} ,
+	-- {
+	-- 	"saadparwaiz1/cmp_luasnip"
+	-- } ,
+
 	{
 		"rafamadriz/friendly-snippets"
 	} ,
@@ -95,14 +96,14 @@ return
 	{
 		'windwp/nvim-autopairs' ,
 		event = "InsertEnter" ,
-		config = true ,
-		opts = {}
+		opts = {} ,
+		config = true,
 	},
 
-	-- 片段：
-	{
-		"hrsh7th/vim-vsnip"
-	} ,
+	-- 片段服务：
+	-- {
+	-- 	"hrsh7th/vim-vsnip"
+	-- } ,
 
 	-- 注释：
 	{
@@ -110,15 +111,16 @@ return
 		-- :help comment-nvim
 
 		"numToStr/Comment.nvim" ,
-		lazy = false ,
+		lazy = true ,
+		event = "LspAttach" ,
 		opts =
 		{
 
 		} ,
 		config =
-		function()
-			require("Extension.Comment.Init")
-		end
+			function()
+				require("Extension.Comment.Init")
+			end
 	} ,
 
 	-- { "akinsho/bufferline.nvim" } ,
@@ -128,8 +130,8 @@ return
 	{
 		"nvim-treesitter/nvim-treesitter" ,
 		lazy = true ,
-		event = "InsertEnter" ,
-		-- cmd = "StartTreeSitter" ,
+		-- event = "InsertEnter" ,
+		cmd = "StartTreeSitter" ,
 		config =
 			function()
 				require("Extension.nvim-treesitter.Init")
@@ -138,10 +140,14 @@ return
 
 	{
 		"nvimdev/lspsaga.nvim" ,
-		config = function()
-			require('lspsaga').setup({})
-		end ,
-		dependencies = {
+		lazy = true ,
+		event = "LspAttach" ,
+		config =
+			function()
+				require('lspsaga').setup({})
+			end ,
+		dependencies =
+		{
 			'nvim-treesitter/nvim-treesitter' ,
 			'nvim-tree/nvim-web-devicons'
 		}
