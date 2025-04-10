@@ -7,6 +7,7 @@ local names =
 	"Lang" ,
 	"Key" ,
 	"Navigation" ,
+	"Session" ,
 	"Other" ,
 	"Appearance"
 }
