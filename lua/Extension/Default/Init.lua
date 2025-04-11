@@ -1,3 +1,6 @@
+-- 禁用 runtime 中的默认扩展：
+-- 将其加载的状态设置为已加载
+
 local g = vim.g
 
 g.loaded_matchit = 1

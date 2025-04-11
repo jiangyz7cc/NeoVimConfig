@@ -12,7 +12,10 @@ return
 		lazy = true ,
 		event = "UIEnter" ,
 		priority = 300 ,
-        dependencies = { "nvim-tree/nvim-web-devicons" } ,
+        dependencies =
+		{
+			"nvim-tree/nvim-web-devicons"
+		} ,
 		opts =
 		{
 			theme = "auto"
@@ -28,6 +31,7 @@ return
 		"EdenEast/nightfox.nvim" ,
 		lazy = false
 	}
+
     -- {
 	-- 	"folke/tokyonight.nvim" ,
 	-- 	lazy = true
