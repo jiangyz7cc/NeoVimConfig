@@ -3,13 +3,33 @@ return
 	-- LSP：
 
 	{
-		"neovim/nvim-lspconfig"
+		"neovim/nvim-lspconfig" ,
+		lazy = true
+		-- ft =
+		-- {
+		-- 	"lua" ,
+		-- 	"c" ,
+		-- 	"csharp"
+		-- }
 	} ,
 
 	-- 扩展管理：
 	{
 		"williamboman/mason.nvim" ,
-		-- lazy = true ,
+		lazy = true ,
+		event =
+		{
+			"BufReadPre" ,
+			"FileType"
+
+			-- "VeryLazy" ,
+			-- "LspAttach"
+		} ,
+		dependencies =
+		{
+			"williamboman/mason-lspconfig.nvim" ,
+			"neovim/nvim-lspconfig"
+		},
 		config =
 			function()
 				require("Extension.mason.Init")
@@ -21,10 +41,6 @@ return
 		"williamboman/mason-lspconfig.nvim" ,
 		lazy = true ,
 		event = "LspAttach" ,
-		dependencies =
-		{
-			"williamboman/mason.nvim"
-		} ,
 		opts =
 		{
 			automatic_installation = true
@@ -57,31 +73,44 @@ return
 
 	-- LSP：
 	{
-		"hrsh7th/cmp-nvim-lsp"
+		"hrsh7th/cmp-nvim-lsp" ,
+		lazy = true ,
+		event = "InsertEnter"
 	} ,
 
 	-- 文件路径：
 	{
-		"hrsh7th/cmp-path"
+		"hrsh7th/cmp-path" ,
+		lazy = true ,
+		event = "InsertEnter"
 	} ,
 
 	-- 缓冲区内容：
 	{
-		"hrsh7th/cmp-buffer"
+		"hrsh7th/cmp-buffer" ,
+		lazy = true ,
+		event = "InsertEnter"
 	} ,
 
 	-- 命令行：
-	-- {
-	-- 	"hrsh7th/cmp-cmdline"
-	-- } ,
+	{
+		"hrsh7th/cmp-cmdline" ,
+		enabled = false ,
+		lazy = true ,
+		event = "VeryLazy"
+	} ,
 
 	-- 片段： 
 	{
-		"hrsh7th/cmp-vsnip"
+		"hrsh7th/cmp-vsnip" ,
+		lazy = true ,
+		event = "InsertEnter"
 	} ,
 
 	{
-		"L3MON4D3/LuaSnip"
+		"L3MON4D3/LuaSnip" ,
+		lazy = true ,
+		event = "InsertEnter"
 	} ,
 
 	-- {
@@ -89,15 +118,20 @@ return
 	-- } ,
 
 	{
-		"rafamadriz/friendly-snippets"
+		"rafamadriz/friendly-snippets" ,
+		lazy = true ,
+		event = "InsertEnter"
 	} ,
 
 	-- 对：() [] "" '' ...
 	{
 		'windwp/nvim-autopairs' ,
+		lazy = true ,
 		event = "InsertEnter" ,
 		opts = {} ,
-		config = true,
+		-- config =
+		-- 	function()
+		-- 	end
 	},
 
 	-- 片段服务：

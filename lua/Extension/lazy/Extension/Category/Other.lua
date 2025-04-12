@@ -3,7 +3,8 @@ return
 	-- 开发：
     {
 		"folke/neodev.nvim" ,
-		lazy = true , 
+		lazy = true ,
+		cmd = "StartNeoDev" ,
 		config =
 			function()
 				require("neodev").setup(
@@ -25,6 +26,6 @@ return
     {
 		"folke/neoconf.nvim" ,
 		lazy = true ,
-		cmd = "NeoConf"
+		cmd = "StartNeoConf"
 	}
 }

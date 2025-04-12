@@ -3,8 +3,9 @@ return
 	-- 文本：
 	{
 		"smoka7/hop.nvim" ,
-		cmd = "StartHop" ,
-		-- lazy = true ,
+		lazy = true ,
+		-- cmd = "StartHop" ,
+		event = "VeryLazy" ,
 		config =
 			function()
 				require("Extension.hop.Init")
@@ -14,9 +15,12 @@ return
 	-- 多域：（文件、缓冲区 ...）
     {
 		"nvim-telescope/telescope.nvim" ,
-		dependencies = { "nvim-lua/plenary.nvim" } ,
-		cmd = "StartTelescope" ,
 		lazy = true ,
+		cmd = "StartTelescope" ,
+		dependencies =
+		{
+			"nvim-lua/plenary.nvim"
+		} ,
 		config =
 			function()
 				require("Extension.telescope.Init")

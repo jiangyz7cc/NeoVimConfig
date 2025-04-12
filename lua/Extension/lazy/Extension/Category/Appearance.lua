@@ -9,6 +9,7 @@ return
 	-- 状态栏：
 	{
 		"nvim-lualine/lualine.nvim" ,
+		enabled = false ,
 		lazy = true ,
 		event = "UIEnter" ,
 		priority = 300 ,
@@ -29,7 +30,8 @@ return
     -- 主题：
     {
 		"EdenEast/nightfox.nvim" ,
-		lazy = false
+		lazy = true ,
+		event  = "UIEnter"
 	}
 
     -- {
