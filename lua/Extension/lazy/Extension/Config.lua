@@ -2,13 +2,13 @@ local prefix = "Extension.lazy.Extension.Category"
 
 local names =
 {
-	"Preset" ,
+	-- "Preset" ,
 	"File" ,
 	"Lang" ,
-	"Key" ,
-	"Navigation" ,
-	"Session" ,
-	"Other" ,
+	-- "Key" ,
+	-- "Navigation" ,
+	-- "Session" ,
+	-- "Other" ,
 	"Appearance"
 }
 

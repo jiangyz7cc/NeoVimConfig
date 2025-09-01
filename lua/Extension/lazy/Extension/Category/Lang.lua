@@ -19,7 +19,7 @@ return
 		lazy = true ,
 		event =
 		{
-			"BufReadPre" ,
+			-- "BufReadPre" ,
 			"FileType"
 
 			-- "VeryLazy" ,
@@ -27,7 +27,6 @@ return
 		} ,
 		dependencies =
 		{
-			"williamboman/mason-lspconfig.nvim" ,
 			"neovim/nvim-lspconfig"
 		},
 		config =
@@ -41,6 +40,10 @@ return
 		"williamboman/mason-lspconfig.nvim" ,
 		lazy = true ,
 		event = "LspAttach" ,
+		dependencies =
+		{
+			"williamboman/mason.nvim"
+		} ,
 		opts =
 		{
 			automatic_installation = true
