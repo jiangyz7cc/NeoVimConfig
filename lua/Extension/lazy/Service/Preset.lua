@@ -1,40 +1,36 @@
 local data = {}
 
-function data.SetRuntimePath()
+function data.SetEnvironment()
 	local psv = require("Extension.lazy.Service.Path")
-
 	local edp = psv.ExtensionPath
 
 	vim.opt.rtp:prepend(edp)
 end
 
-function data.SetRuntimeEnvironment()
-	data.SetRuntimePath()
-end
-
-function data.Init()
-	data.SetRuntimeEnvironment()
-end
-
----@type function
-function data.InitAsFirstRun()
-	local psv = require("Extension.lazy.Service.Path")
-
-	local edp = psv.ExtensionPath
-
-	-- 如果 lazy 的目录路径已存在
-	if vim.loop.fs_stat(edp)
-	then
-		print("lazy 目录已存在！")
-		return
-	end
-
-	-- 执行下载命令：
+function data.InstallLazy(edp)
 	local dsv = require("Extension.lazy.Service.Download")
 
 	dsv.DownloadSelf(edp)
 
-	data.Init()
+	vim.opt.rtp:prepend(edp)
+end
+
+function data.Init()
+	data.SetEnvironment()
+
+	local psv = require("Extension.lazy.Service.Path")
+	local edp = psv.ExtensionPath
+
+	print("edp" , edp)
+
+	-- 检查扩展的目录路径是否存在：
+	if vim.loop.fs_stat(edp)
+	then
+		-- print("lazy 目录已存在！")
+		return
+	else
+		InstallLazy(edp)
+	end
 end
 
 return data

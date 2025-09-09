@@ -1,12 +1,10 @@
-local model = {}
+local module = {}
 
-local nvp = require("Common.Path.NeoVim")
+local nvPath = require("Common.Path.NeoVim")
 
-local vddp = nvp.DataPath
+local dataPath = nvPath.DataPath
 
 -- 获取扩展 (lazy) 的目录路径：
-local edp = vddp .. "/lazy/lazy.nvim"
+module.ExtensionPath = dataPath .. "/lazy/lazy.nvim"
 
-model.ExtensionPath = edp
-
-return model
+return module
